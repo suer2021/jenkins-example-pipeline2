@@ -11,8 +11,20 @@ pipeline {
         }
         stage('Frontend tests') {
             steps {
-                bat 'echo %cd%'
-                bat 'dir'
+                bat '''
+                    cd frontend-project/
+                    npm install && npm run test:report:regression
+                '''
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend-project/cypress/videos/**', followSymlinks: false
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: false,
+                    reportDir: 'frontend-project/mochawesome-report',
+                    reportFiles: 'mochawesome.html',
+                    reportName: 'Frontend report',
+                    reportTitles: ''
+                ])
             }
         }
         stage('Backend tests') {
@@ -23,8 +35,20 @@ pipeline {
         }
         stage('Performance tests') {
             steps {
-                bat 'echo %cd%'
-                bat 'dir'
+                bat '''
+                    cd performance-tests/
+                    del /f "test1.csv" && rmdir /Q /S "html-reports/"
+                    C:/Users/uzab/apache-jmeter-5.4.1/bin/jmeter -n -t login-logout.jmx -l test1.csv -e -o html-reports/
+                '''
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: false,
+                    reportDir: 'performance-tests/html-reports',
+                    reportFiles: 'index.html',
+                    reportName: 'JMeter dashboard report',
+                    reportTitles: ''
+                ])
             }
         }
     }

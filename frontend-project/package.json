@@ -1,20 +1,17 @@
 {
-  "name": "frontend-project",
+  "name": "front-end",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open",
-    "test:report:regression":"cypress run --spec cypress/integration/regression-suite.spec.js --reporter mochawesome",
-    "test:report:vrt":"cypress run --spec cypress/integration/vrt.spec.js --reporter mochawesome"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --spec cypress/integration/hello-world.spec.js --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^4.7.0",
-    "mocha": "^5.2.0",
-    "mochawesome": "^6.1.1",
-    "mochawesome-merge": "^4.1.0"
+  "devDependencies": {
+    "cypress": "^7.2.0",
+    "mochawesome": "^6.2.2"
   }
 }

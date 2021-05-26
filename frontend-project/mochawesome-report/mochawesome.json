@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-04T11:14:39.810Z",
+    "end": "2021-05-04T11:14:39.889Z",
+    "duration": 79,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f148d86-ba37-4198-bce0-9f237ece5253",
+      "title": "",
+      "fullFile": "cypress/integration/hello-world.spec.js",
+      "file": "cypress/integration/hello-world.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb8e4918-4018-4243-b904-1a6aac667015",
+          "title": "First example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test case 1",
+              "fullTitle": "First example Test case 1",
+              "timedOut": null,
+              "duration": 22,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('hello world!');",
+              "err": {},
+              "uuid": "14a8c373-0b18-4a60-956f-877373a5d3dc",
+              "parentUUID": "eb8e4918-4018-4243-b904-1a6aac667015",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 2",
+              "fullTitle": "First example Test case 2",
+              "timedOut": null,
+              "duration": 14,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('hello world!');",
+              "err": {},
+              "uuid": "2d8cf718-ac33-4644-8141-b47d75702896",
+              "parentUUID": "eb8e4918-4018-4243-b904-1a6aac667015",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 3",
+              "fullTitle": "First example Test case 3",
+              "timedOut": null,
+              "duration": 12,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('hello world!');",
+              "err": {},
+              "uuid": "915a6dc2-e2df-4eb5-b7ed-abc4f176800d",
+              "parentUUID": "eb8e4918-4018-4243-b904-1a6aac667015",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "14a8c373-0b18-4a60-956f-877373a5d3dc",
+            "2d8cf718-ac33-4644-8141-b47d75702896",
+            "915a6dc2-e2df-4eb5-b7ed-abc4f176800d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
