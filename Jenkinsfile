@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('Deploy/Build App') {
             steps {
-                bat 'echo %cd%'
-                bat 'dir'
+                bat '''
+                    echo 'Application deployed successfully'
+                '''
             }
         }
         stage('Frontend tests') {
