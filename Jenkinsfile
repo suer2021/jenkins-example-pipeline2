@@ -13,7 +13,7 @@ pipeline {
             steps {
                 bat '''
                     cd frontend-project/
-                    npm install && npm run test:report:regression
+                    npm install && npm run cypress:run
                 '''
                 archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend-project/cypress/videos/**', followSymlinks: false
                 publishHTML([
